@@ -1,12 +1,26 @@
-{
-  "name": "Wizard-Vicuna-30B-Uncensored-GPTQ",
-  "category": "Natural Language",
-  "example_input": {
-    "max_new_tokens": 5,
-    "prompt": "My favorite part about working with AI is"
-  },
-  "example_output": {
-    "output": "My favorite part about working with AI is that I get to work with a lot of different Ai."
-  },
-  "version": "1"
+# pip3 install banana-dev
+
+import banana_dev as client
+
+# Create a reference to your model on Banana
+my_model = client.Client(
+    api_key="8a363797-67e0-433f-a111-bdf3a45ccdd2",
+    model_key="ef1308d3-e154-4f9d-ad33-050cf6a7122b",
+    url="https://wizard-vicuna-30b--llz9znvd8a.run.banana.dev",
+)
+
+# Specify the model's input JSON, what you expect 
+# to receive in your Potassium app. Here is an 
+# example for a basic BERT model:
+inputs = {
+    "prompt": "In the summer I like [MASK].",
 }
+
+# Call your model's inference endpoint on Banana.
+# If you have set up your Potassium app with a
+# non-default endpoint, change the first 
+# method argument ("/")to specify a 
+# different route.
+result, meta = my_model.call("/", inputs)
+
+print(result)
