@@ -1,3 +1,4 @@
 sanic==22.6.2
 transformers
 accelerate
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
