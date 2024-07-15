@@ -1,3 +1,4 @@
 sanic==22.6.2
 transformers
 accelerate
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
