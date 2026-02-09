@@ -1,3 +1,4 @@
 sanic==22.6.2
 transformers
 accelerate
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
